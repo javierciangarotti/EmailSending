@@ -9,6 +9,9 @@ end
 # bootstrap
 gem 'bootstrap-sass'
 
+# materialize
+gem 'materialize-sass'
+
 # devise
 gem 'devise'
 #simple authentication

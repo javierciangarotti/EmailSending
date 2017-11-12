@@ -20,15 +20,29 @@
         <ul class="nav navbar-nav navbar-right">
           <li>
             <div class="buttons">
+              <% if user_signed_in? %>
+                <button type="button" class="btn btn-default">  <%= link_to 'Log Out', destroy_user_session_path, method: :delete  %> </button>
+              <% else %>
 
-              <button type="button" class="btn btn-default">  <%= link_to 'Login', new_user_session_path  %> </button>
+                <button type="button" class="btn btn-default">  <%= link_to 'Sign In', new_user_session_path  %> </button>
+                <button type="button" class="btn btn-default">  <%= link_to 'Sign Up', new_user_registration_path  %> </button>
+
+              <% end %>
+
+
             </div>
           </li>
         </ul>
 
       </div>
     </nav>
+    <body>
+      <div class="container">
+        <!-- Page Content goes here -->
+        <%= yield %>
+      </div>
+    </body>
 
-    <%= yield %>
+
   </body>
 </html>
