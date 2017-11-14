@@ -16,8 +16,8 @@
         </div>
         <div class="input-field col s12 m6 l6">
           <i class="material-icons prefix">account_circle</i>
-          <%= f.text_field :last_name, 'required': '', 'aria-required': "true", class: 'validate' %>
-          <%= f.label :Apellido, for: 'icon_prefix'  %>
+          <%= f.text_field :last_name, required:"", 'aria-required':"true", class: 'validate' %>
+          <%= f.label :Apellido, for: 'icon_prefix', id: "user_last_name"  %>
         </div>
 
         <div class="input-field col s12 m12 l12">

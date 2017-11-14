@@ -73,6 +73,10 @@ $(document).ready(function () {
              required: true,
              minlength: 5
          },
+         "user[last_name]": {
+             required: true,
+             minlength: 5
+         },
          "user[document]": {
              required: true,
              regex: /^0*(\d{1,3}(\.?\d{3})*)\-?([\dkK])$/,
@@ -80,7 +84,8 @@ $(document).ready(function () {
          }
        },
         messages: {
-          "user[first_name]": "Enter your firstname",
+          "user[first_name]": "Ingresa tu Nombre",
+          "user[last_name]": "Ingresa tu Apellido",
           "user[document]":
             {
               required: "Ingresa un documento válido",
@@ -100,7 +105,7 @@ $(document).ready(function () {
     field.mask(maskBehavior.apply({}, arguments), options);
     }
    };
-
-   $('#user_document').mask(maskBehavior, options);
+   // Descomentar para automatizar el formato del RUT.
+   //$('#user_document').mask(maskBehavior, options);
 
 });
